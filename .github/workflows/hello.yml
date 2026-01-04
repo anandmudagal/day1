@@ -1,0 +1,21 @@
+name: Hello GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:   # allows manual run
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions 🚀"
+
+      - name: Print multiple lines
+        run: |
+          echo "This is a basic workflow"
+          echo "Running on Ubuntu"
+          echo "Triggered successfully"
